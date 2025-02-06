@@ -1,6 +1,6 @@
 package com.aochen.threadcore.day02.code;
 
-import java.nio.Buffer;
+import com.aochen.threadcore.day02.code.buffer.BufferResource;
 
 /**
  * <p>

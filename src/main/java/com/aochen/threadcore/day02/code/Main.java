@@ -1,10 +1,13 @@
 package com.aochen.threadcore.day02.code;
 
+import com.aochen.threadcore.day02.code.buffer.*;
+
 import java.util.LinkedList;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * <p>
- * description xxx
+ * description 主方法：用于测试使用
  * </p>
  *
  * @author ao.chen02@hand-china.com
@@ -16,8 +19,12 @@ public class Main {
     }
 
     private static void test01() {
-        // 创建缓冲区
-        BufferResource resource = new BufferResource(new LinkedList<>());
+        // 创建Object方式的缓冲区
+         BufferResource resource = new ObjectBufferResource(new LinkedList<>());
+        // 创建Lock方式的缓冲区
+        // BufferResource resource = new LockBufferResource(new LinkedList<>());
+        // 创建blockQueue方法的缓冲区
+        // BufferResource resource = new BlockingQueueBufferResource(new LinkedBlockingDeque<>(BaseBufferResource.MAX_CAPACITY));
 
         // 分别创建10个消费者和生产者进行生产和消费
         for (int i = 0; i < 10; i++) {

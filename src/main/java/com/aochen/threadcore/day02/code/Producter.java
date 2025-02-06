@@ -1,10 +1,12 @@
 package com.aochen.threadcore.day02.code;
 
+import com.aochen.threadcore.day02.code.buffer.BufferResource;
+
 import java.util.Random;
 
 /**
  * <p>
- * description 生产者
+ * description 生产者线程
  * </p>
  *
  * @author ao.chen02@hand-china.com
